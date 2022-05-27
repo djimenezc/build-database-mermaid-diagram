@@ -1,6 +1,8 @@
 from schemacrawler.schema import TableRelationshipType # pylint: disable=import-error
 import re
 
+print("```mermaid")
+
 print('erDiagram')
 print('')
 for table in catalog.tables:
@@ -14,3 +16,5 @@ for table in catalog.tables:
   for childTable in table.getRelatedTables(TableRelationshipType.child):
     print('  ' + table.name + ' ||--o{ ' + childTable.name + ' : "foreign key"')
   print('')
+
+print("```")

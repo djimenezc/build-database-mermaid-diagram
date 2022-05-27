@@ -1,3 +1,4 @@
+```mermaid
 erDiagram
 
   Artist {
@@ -116,3 +117,7 @@ erDiagram
 
   Track ||--o{ InvoiceLine : "foreign key"
   Track ||--o{ PlaylistTrack : "foreign key"
+
+
+
+```
